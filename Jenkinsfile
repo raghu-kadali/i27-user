@@ -30,7 +30,7 @@ pipeline {
         choice(name: 'docker_build_and_push', 
              choices: ['yes', 'no'], description: 'Build and push Docker image')
         choice(name: 'deploy_to_dev', 
-             choices: ['yes', 'yes'], description: 'Deploy to dev environment')  
+             choices: ['yes', 'no'], description: 'Deploy to dev environment')  
         choice(name: 'deploy_to_test', 
              choices: ['no', 'yes'], description: 'Deploy to test environment') 
         choice(name: 'deploy_to_stage', 
