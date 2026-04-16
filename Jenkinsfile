@@ -1,5 +1,5 @@
 
-// this is product page 
+// this is user page 
 pipeline {
     agent {
         label 'java-slave'
@@ -11,7 +11,7 @@ pipeline {
     }
 
     environment {
-        APPLICATION_NAME = 'product'
+        APPLICATION_NAME = 'user'
         // SONAR_HOST_URL = "http://35.188.126.241:9000"
         // SONAR_LOGIN_TOKEN = credentials('raghu_sonar_creds')
         POM_VERSION = readMavenPom().getVersion()
@@ -30,7 +30,7 @@ pipeline {
         choice(name: 'docker_build_and_push', 
              choices: ['yes', 'no'], description: 'Build and push Docker image')
         choice(name: 'deploy_to_dev', 
-             choices: ['no', 'yes'], description: 'Deploy to dev environment')  
+             choices: ['yes', 'yes'], description: 'Deploy to dev environment')  
         choice(name: 'deploy_to_test', 
              choices: ['no', 'yes'], description: 'Deploy to test environment') 
         choice(name: 'deploy_to_stage', 
