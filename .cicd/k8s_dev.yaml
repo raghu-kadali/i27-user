@@ -18,7 +18,7 @@ spec:
       - name: i27-user-app
         image: DIT # this will be replaced by shared library
         ports:
-        - containerPort: 8761
+        - containerPort: 8232
 ---
 # Service 
 apiVersion: v1
