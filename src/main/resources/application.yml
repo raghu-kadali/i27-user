@@ -57,4 +57,4 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://136.113.77.108:31170/eureka/
+      defaultZone: http://eureka-dev.raghuprojectdevops.in/eureka/
