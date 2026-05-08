@@ -14,6 +14,8 @@ spec:
       labels:
         app: i27-user-app
     spec:
+      imagePullSecrets:  #used to pvt registry to pull the image that kept in scerte like regcred in thatsecrete jfrog connected information avaible
+        - name: jfrog-secret
       containers:
       - name: i27-user-app
         image: DIT # this will be replaced by shared library
